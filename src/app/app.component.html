@@ -1,4 +1,18 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<div>
+  {{ title }}
+  <br />
+  {{ title | uppercase }}
+
+  <br />
+  {{ fecha | date: 'dd-MMMM-yyyy' }}
+</div>
+<br />
+{{ 5558 | currency }}
+
+<br />
+<div
+  *ngFor="let pelicula of peliculas; let indice = index"
+  class="ContentPelicula"
+>
+  {{ indice + 1 }} {{ pelicula.nombre }}
+</div>
